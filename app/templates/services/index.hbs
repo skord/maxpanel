@@ -1,0 +1,25 @@
+<h2>Services</h2>
+<table class="ui celled table">
+  <thead>
+    <tr>
+      <th>Service Name</th>
+      <th>Value</th>
+      <th>Num Sessions</th>
+      <th>Total Sessions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |service|}}
+      <tr>
+        <td>{{service.serviceName}}</td>
+        <td>{{service.routerModule}}</td>
+        <td>{{service.noSessions}}</td>
+        <td>{{service.totalSessions}}</td>
+      </tr>
+    {{/each}}
+
+  </tbody>
+  <tfoot>
+
+  </tfoot>
+</table>

@@ -1,0 +1,21 @@
+<h2>Status</h2>
+<table class="ui celled table">
+  <thead>
+    <tr>
+      <th>Variable Name</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |status|}}
+      <tr>
+        <td>{{status.variableName}}</td>
+        <td>{{status.value}}</td>
+      </tr>
+    {{/each}}
+
+  </tbody>
+  <tfoot>
+
+  </tfoot>
+</table>

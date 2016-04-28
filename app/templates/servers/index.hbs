@@ -1,0 +1,27 @@
+<h2>Servers</h2>
+<table class="ui celled table">
+  <thead>
+    <tr>
+      <th>Server</th>
+      <th>Address</th>
+      <th>Port</th>
+      <th>Connections</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |server|}}
+      <tr>
+        <td>{{server.server}}</td>
+        <td>{{server.address}}</td>
+        <td>{{server.port}}</td>
+        <td>{{server.connections}}</td>
+        <td>{{server.status}}</td>
+      </tr>
+    {{/each}}
+
+  </tbody>
+  <tfoot>
+
+  </tfoot>
+</table>

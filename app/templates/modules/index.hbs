@@ -1,0 +1,27 @@
+<h2>Modules</h2>
+<table class="ui celled table">
+  <thead>
+    <tr>
+      <th>Module Name</th>
+      <th>Module Type</th>
+      <th>Version</th>
+      <th>API Version</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |module|}}
+      <tr>
+        <td>{{module.moduleName}}</td>
+        <td>{{module.moduleType}}</td>
+        <td>{{module.version}}</td>
+        <td>{{module.apiVersion}}</td>
+        <td>{{module.status}}</td>
+      </tr>
+    {{/each}}
+
+  </tbody>
+  <tfoot>
+
+  </tfoot>
+</table>
