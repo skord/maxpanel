@@ -41,7 +41,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-You'll need to update the host that has maxscale with maxinfo running in services/ajax.js for now. 
+You'll need to update the host that has maxscale with maxinfo running in adapters/application.js for now. 
 
 ## Further Reading / Useful Links
 
