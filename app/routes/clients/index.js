@@ -1,15 +1,27 @@
 import Ember from 'ember';
-import camelcaseKeys from 'npm:camelcase-keys';
+
 
 export default Ember.Route.extend({
-  ajax: Ember.inject.service(),
-  model() {
-    return this.get('ajax').request('/clients.json').then(function(data){
-      var newData = data.map(function(obj){
-        var newObj = camelcaseKeys(obj);
-        return newObj;
-      });
-      return newData;
-    });
+  model: function() {
+    return this.store.findAll('client');
+  },
+  setupController: function(controller, model){
+    this._super(controller, model);
+    this.startRefreshing();
+  },
+  startRefreshing: function(){
+    this.set('refreshing', true);
+    Ember.run.later(this, this.refresh, 1000);
+  },
+  refresh: function(){
+    if(!this.get('refreshing'))
+      return;
+    this.store.findAll('client');
+    Ember.run.later(this, this.refresh, 1000);
+  },
+  actions:{
+    willTransition: function(){
+      this.set('refreshing', false);
+    }
   }
 });
