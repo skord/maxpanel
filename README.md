@@ -3,6 +3,10 @@
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
+## Just want to look at it?
+
+There's a demo environment you can try yourself if you have docker-compose installed. Just clone this repo: https://github.com/skord/box and docker-compose up.
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
