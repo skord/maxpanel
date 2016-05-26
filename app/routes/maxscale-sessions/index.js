@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function() {
-    return this.store.findAll('event');
+    return this.store.findAll('maxscale-session');
   },
   setupController: function(controller, model){
     this._super(controller, model);
@@ -15,7 +15,7 @@ export default Ember.Route.extend({
   refresh: function(){
     if(!this.get('refreshing'))
       return;
-    this.store.findAll('event');
+    this.store.findAll('maxscale-session');
     Ember.run.later(this, this.refresh, 1000);
   },
   actions:{

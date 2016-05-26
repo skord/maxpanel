@@ -16,6 +16,9 @@ Router.map(function() {
   this.route('servers', function() {});
   this.route('events', function() {});
   this.route('welcome', function() {});
+  this.route('maxscale_sessions', function() {});
+
+  this.route('event', function() {});
 });
 
 export default Router;

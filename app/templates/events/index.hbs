@@ -1,8 +1,19 @@
-<i>At some point, this should actually have the real data, and the chart data should update</i>
-<div class="chart-container">
-   {{vertical-bar-chart
-     data=content
-     sortKey=group
-     selectedSeedColor="rgb(30, 120, 190)"
-   }}
-</div>
+<h2>Event Times</h2>
+<table class="ui celled table">
+  <thead>
+    <tr>
+      <th>Duration</th>
+      <th>No. Events Queued</th>
+      <th>No. Events Executed</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |event|}}
+      <tr>
+        <td>{{event.duration}}</td>
+        <td>{{event.queued}}</td>
+        <td>{{event.executed}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
