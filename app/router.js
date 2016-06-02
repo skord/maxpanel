@@ -11,7 +11,7 @@ Router.map(function() {
   this.route('services', function() {});
   this.route('listeners', function() {});
   this.route('modules', function() {});
-  this.route('sessions', function() {});
+  this.route('sessions');
   this.route('clients', function() {});
   this.route('servers', function() {});
   this.route('events', function() {});
@@ -19,6 +19,7 @@ Router.map(function() {
   this.route('maxscale_sessions', function() {});
 
   this.route('event', function() {});
+  this.route('maxscale_session');
 });
 
 export default Router;

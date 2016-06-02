@@ -10,7 +10,7 @@ export default JSONAPISerializer.extend({
       var normalizedKeys = camelcaseKeys(client);
 
       var entry = {
-        id: i,
+        id: normalizedKeys.session,
         type: primaryModelClass.modelName,
         attributes: {
           'session': normalizedKeys.session,

@@ -4,22 +4,24 @@ export default Ember.Route.extend({
   model: function() {
     return this.store.findAll('service');
   },
-  setupController: function(controller, model){
+  setupController: function(controller, model) {
     this._super(controller, model);
     this.startRefreshing();
   },
-  startRefreshing: function(){
+  startRefreshing: function() {
     this.set('refreshing', true);
     Ember.run.later(this, this.refresh, 1000);
   },
-  refresh: function(){
-    if(!this.get('refreshing'))
+  refresh: function() {
+    if (!this.get('refreshing')) {
       return;
-    this.store.findAll('service');
-    Ember.run.later(this, this.refresh, 1000);
+    } else {
+      this.store.findAll('service');
+      Ember.run.later(this, this.refresh, 1000);
+    }
   },
-  actions:{
-    willTransition: function(){
+  actions: {
+    willTransition: function() {
       this.set('refreshing', false);
     }
   }

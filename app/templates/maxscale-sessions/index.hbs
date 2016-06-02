@@ -1,1 +1,25 @@
-{{outlet}}
+<h2>Status</h2>
+<table class="ui celled table">
+  <thead>
+    <tr>
+      <th>Session</th>
+      <th>Client</th>
+      <th>Service</th>
+      <th>State</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |session|}}
+      <tr>
+        <td>{{session.session}}</td>
+        <td>{{session.client}}</td>
+        <td>{{session.service}}</td>
+        <td>{{session.state}}</td>
+      </tr>
+    {{/each}}
+
+  </tbody>
+  <tfoot>
+
+  </tfoot>
+</table>
