@@ -11,12 +11,12 @@
   </thead>
   <tbody>
     {{#each model as |module|}}
-      <tr>
+      <tr class={{ listenerRowState module.status }}>
         <td>{{module.name}}</td>
         <td>{{module.type}}</td>
         <td>{{module.version}}</td>
         <td>{{module.apiversion}}</td>
-        <td>{{module.status}}</td>
+        <td class={{ cellstate module.status }}>{{module.status}}</td>
       </tr>
     {{/each}}
 

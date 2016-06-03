@@ -6,9 +6,6 @@
     "ember-cli-test-loader": "0.2.2",
     "ember-qunit-notifications": "0.1.0",
     "semantic-ui": "^2.1.8",
-    "ic-ajax": "^2.0.2",
-    "d3": "~3.5.3",
-    "lodash": "~3.10.0",
-    "chartjs": "1.0.2"
+    "ic-ajax": "^2.0.2"
   }
 }

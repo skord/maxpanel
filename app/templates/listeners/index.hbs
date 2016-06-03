@@ -11,12 +11,12 @@
   </thead>
   <tbody>
     {{#each model as |listener|}}
-      <tr>
+      <tr class={{ listenerRowState listener.state }}>
         <td>{{listener.name}}</td>
         <td>{{listener.protocolmodule}}</td>
         <td>{{listener.address}}</td>
         <td>{{listener.port}}</td>
-        <td>{{listener.state}}</td>
+        <td class="{{cellstate listener.state}}">{{listener.state}}</td>
       </tr>
     {{/each}}
 
