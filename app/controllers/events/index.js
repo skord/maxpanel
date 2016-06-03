@@ -18,7 +18,7 @@ export default Ember.Controller.extend({
             text: 'Event Count'
           }
         }
-      }
+      };
     }),
 
     chartData: Ember.computed('model.@each.queued', function() {
@@ -30,7 +30,7 @@ export default Ember.Controller.extend({
           name: 'Executed',
           data: this.get('model').mapBy('executed').map(function(i){return +i;})
         }]
-    )
+    );
   })
 
 });
