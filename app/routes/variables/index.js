@@ -10,14 +10,14 @@ export default Ember.Route.extend({
   },
   startRefreshing: function() {
     this.set('refreshing', true);
-    Ember.run.later(this, this.refresh, 1000);
+    Ember.run.later(this, this.refresh, 2000);
   },
   refresh: function() {
     if (!this.get('refreshing')) {
       return;
     } else {
       this.store.findAll('variable');
-      Ember.run.later(this, this.refresh, 1000);
+      Ember.run.later(this, this.refresh, 2000);
     }
   },
   actions: {
