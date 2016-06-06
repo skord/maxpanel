@@ -4,7 +4,7 @@ export default Ember.Component.extend({
   tagName: '',
   actions: {
     toggleSidebar: function() {
-      $('.ui.sidebar').sidebar('toggle');
+      Ember.$('.ui.sidebar').sidebar('toggle');
     }
   }
 });
