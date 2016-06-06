@@ -45,7 +45,14 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-You'll need to update the host that has maxscale with maxinfo running in adapters/application.js for now. 
+In production mode, Maxpanel expects a few things:
+
+* Maxpanel runs at the site root.
+* API Requests to MaxInfo are prefixed with /api on the same host as Maxpanel
+* CORS headers are added to the API responses.  
+
+[An example nginx config](https://github.com/skord/box/blob/master/maxpanel/default.conf) is provided in the Box repo. In that config, Maxpanel lives in /app and the /api/ location proxy passes to MaxInfo and adds the CORS headers. 
+
 
 ## Further Reading / Useful Links
 
