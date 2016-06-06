@@ -1,7 +1,9 @@
 {{maxpanel-sidebar}}
 
 <div class='main-content'>
+  <div class="ui pusher">
+    {{outlet}}
+    {{loading-slider isLoading=loading duration=250}}
 
-  {{outlet}}
-  {{loading-slider isLoading=loading duration=250}}
+  </div>
 </div>
