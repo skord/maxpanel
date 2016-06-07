@@ -25,10 +25,10 @@ export default Ember.Controller.extend({
       return (
         [{
           name: 'Queued',
-          data: this.get('model').mapBy('queued').map(function(i){return +i;})
+          data: this.get('model').mapBy('queued')
         }, {
           name: 'Executed',
-          data: this.get('model').mapBy('executed').map(function(i){return +i;})
+          data: this.get('model').mapBy('executed')
         }]
     );
   })
