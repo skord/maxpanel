@@ -1,6 +1,11 @@
+{{md-btn text="Graph" action="toggleGraph" class="indigo darken-2"}}
+{{md-btn text="Table" action="toggleTable" class="indigo darken-2"}}
+
+{{#if isShowingGraph}}
 {{high-charts chartOptions=chartOptions content=chartData theme=theme}}
-<h2>Event Times</h2>
-<table class="ui celled table">
+{{/if}}
+{{#if isShowingTable}}
+<table class="bordered">
   <thead>
     <tr>
       <th>Duration</th>
@@ -18,3 +23,4 @@
     {{/each}}
   </tbody>
 </table>
+{{/if}}

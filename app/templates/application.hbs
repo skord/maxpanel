@@ -1,9 +1,8 @@
 {{maxpanel-sidebar}}
 
-<div class='main-content'>
-  <div class="ui pusher">
-    {{outlet}}
-    {{loading-slider isLoading=loading duration=250}}
-
-  </div>
+<div class='main-content container'>
+  {{outlet}}
+  {{loading-slider isLoading=loading duration=250}}
 </div>
+{{!-- ember-cli-materialize modal container --}}
+{{md-modal-container}}

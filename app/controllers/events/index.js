@@ -2,6 +2,15 @@ import Ember from 'ember';
 // import defaultTheme from '../themes/default-theme';
 
 export default Ember.Controller.extend({
+    isShowingGraph: true,
+    actions: {
+      toggleGraph: function() {
+        this.toggleProperty('isShowingGraph');
+      },
+      toggleTable: function() {
+        this.toggleProperty('isShowingTable');
+      }
+    },
     chartOptions: Ember.computed('model', function(){
       return {
         chart: {
