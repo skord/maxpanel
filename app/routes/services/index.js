@@ -16,8 +16,13 @@ export default Ember.Route.extend({
     if (!this.get('refreshing')) {
       return;
     } else {
-      this.store.findAll('service');
+      let userPromise = this.store.findAll('service', {reload: true});
+      userPromise.catch((error) => {
+        return this.transitionTo("error");
+      });
+
       Ember.run.later(this, this.refresh, 2000);
+      return userPromise;
     }
   },
   actions: {

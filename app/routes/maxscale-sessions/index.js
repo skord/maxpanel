@@ -16,8 +16,12 @@ export default Ember.Route.extend({
     if (!this.get('refreshing')) {
       return;
     } else {
-      this.store.findAll('maxscale-session');
+      let userPromise = this.store.findAll('maxscale-session', {reload: true});
+      userPromise.catch((error) => {
+        return this.transitionTo("error");
+      });
       Ember.run.later(this, this.refresh, 2000);
+      return userPromise
     }
   },
   actions: {

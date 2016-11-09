@@ -1,8 +1,19 @@
-{{maxpanel-sidebar}}
-
-<div class='main-content container'>
-  {{outlet}}
-  {{loading-slider isLoading=loading duration=250}}
+<div class='ui fixed blue inverted menu'>
+  <div class='item'>
+    MaxPanel
+  </div>
 </div>
-{{!-- ember-cli-materialize modal container --}}
-{{md-modal-container}}
+
+<div id="main-content" class='ui grid container'>
+  <div class='four wide column'>
+    {{maxpanel-sidebar}}
+  </div>
+  <div class='twelve wide column'>
+
+    {{outlet}}
+    {{loading-slider isLoading=loading duration=250}}
+
+    {{!-- ember-cli-materialize modal container --}}
+    {{md-modal-container}}
+  </div>
+</div>

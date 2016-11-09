@@ -1,10 +1,14 @@
-{{md-btn text="Graph" action="toggleGraph" class="indigo darken-2"}}
-{{md-btn text="Table" action="toggleTable" class="indigo darken-2"}}
-
 {{#if isShowingGraph}}
+<div class="ui button" {{action "toggleGraph"}}>
+  Table
+</div>
 {{high-charts chartOptions=chartOptions content=chartData theme=theme}}
 {{/if}}
 {{#if isShowingTable}}
+<div class="ui button" {{action "toggleGraph"}}>
+  Graph
+</div>
+
 <table class="bordered">
   <thead>
     <tr>

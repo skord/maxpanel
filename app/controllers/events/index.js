@@ -6,8 +6,6 @@ export default Ember.Controller.extend({
     actions: {
       toggleGraph: function() {
         this.toggleProperty('isShowingGraph');
-      },
-      toggleTable: function() {
         this.toggleProperty('isShowingTable');
       }
     },

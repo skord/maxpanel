@@ -20,6 +20,7 @@ Router.map(function() {
 
   this.route('event', function() {});
   this.route('maxscale_session');
+  this.route('error', function() {});
 });
 
 export default Router;
