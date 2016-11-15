@@ -1,0 +1,62 @@
+<div class="ui breadcrumb">
+  {{#link-to "servers.index" class="section"}}
+    Servers
+  {{/link-to}}
+  <span class="divider"> / </span>
+  <div class="section active">{{model.server}}</div>
+</div>
+
+<table class="ui definition table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Server</td>
+      <td>{{model.server}}</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td class={{cellstate model.status}}>{{model.status}}</td>
+    </tr>
+    <tr>
+      <td>Protocol</td>
+      <td>{{model.protocol}}</td>
+    </tr>
+    <tr>
+      <td>Port</td>
+      <td>{{model.port}}</td>
+    </tr>
+    <tr>
+      <td>Server Version</td>
+      <td>{{model.serverVersion}}</td>
+    </tr>
+    <tr>
+      <td>Node ID</td>
+      <td>{{model.nodeId}}</td>
+    </tr>
+    <tr>
+      <td>Slave Ids</td>
+      <td>{{model.slaveIds}}</td>
+    </tr>
+    <tr>
+      <td>Repl Depth</td>
+      <td>{{model.replDepth}}</td>
+    </tr>
+    <tr>
+      <td>Current Number of Connections</td>
+      <td>{{model.currentNoOfConns}}</td>
+    </tr>
+    <tr>
+      <td>Current Number of Operations</td>
+      <td>{{model.currentNoOfOperations}}</td>
+    </tr>
+    <tr>
+      <td>Total Connections</td>
+      <td>{{model.numberOfConnections}}</td>
+    </tr>
+  </tbody>
+</table>
