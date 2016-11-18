@@ -7,7 +7,7 @@ export default DS.Model.extend({
   port: DS.attr('number'),
   serverVersion: DS.attr(),
   nodeId: DS.attr('number'),
-  masterId: DS.attr().to_i,
+  masterId: DS.attr(),
   slaveIds: DS.attr(),
   replDepth: DS.attr(),
   numberOfConnections: DS.attr('number'),

@@ -11,8 +11,8 @@
   <tbody>
     {{#each model as |listener|}}
       <tr class={{ listenerRowState listener.state }}>
-        <td>{{listener.name}}</td>
-        <td>{{listener.protocolmodule}}</td>
+        <td>{{listener.serviceName}}</td>
+        <td>{{listener.protocolModule}}</td>
         <td>{{listener.address}}</td>
         <td>{{listener.port}}</td>
         <td class="{{cellstate listener.state}}">{{listener.state}}</td>
