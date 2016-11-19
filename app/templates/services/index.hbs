@@ -1,19 +1,19 @@
-<table class='bordered'>
+<table class='ui table bordered'>
   <thead>
     <tr>
       <th>Service Name</th>
-      <th>Value</th>
-      <th>Num Sessions</th>
-      <th>Total Sessions</th>
+      <th>Router</th>
+      <th>Current State</th>
+      <th>Current Connections</th>
     </tr>
   </thead>
   <tbody>
     {{#each model as |service|}}
       <tr>
-        <td>{{service.name}}</td>
+        <td>{{#link-to "services.show" service.id}}{{service.service}}{{/link-to}}</td>
         <td>{{service.router}}</td>
-        <td>{{service.sessions}}</td>
-        <td>{{service.totalsessions}}</td>
+        <td>{{service.state}}</td>
+        <td>{{service.currentlyConnected}}</td>
       </tr>
     {{/each}}
 

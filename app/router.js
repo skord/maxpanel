@@ -8,12 +8,16 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('variables', function() {});
   this.route('status', function() {});
-  this.route('services', function() {});
+  this.route('services', function() {
+    this.route('show', { path: '/:service_id'});
+  });
   this.route('listeners', function() {});
   this.route('modules', function() {});
   this.route('sessions');
   this.route('clients', function() {});
-  this.route('servers', function() {});
+  this.route('servers', function() {
+    this.route('show', { path: '/:server_id'});
+  });
   this.route('events', function() {});
   this.route('welcome', function() {});
   this.route('maxscale_sessions', function() {});

@@ -1,20 +1,18 @@
-<table class="bordered">
+<table class="ui table bordered">
   <thead>
     <tr>
       <th>Server</th>
-      <th>Address</th>
-      <th>Port</th>
-      <th>Connections</th>
+      <th>Current Connections</th>
+      <th>Total Connections</th>
       <th>Status</th>
     </tr>
   </thead>
   <tbody>
     {{#each model as |server|}}
       <tr class={{ listenerRowState server.status}}>
-        <td>{{server.server}}</td>
-        <td>{{server.address}}</td>
-        <td>{{server.port}}</td>
-        <td>{{server.connections}}</td>
+        <td>{{#link-to "servers.show" server.id}}{{server.server}}:{{server.port}}{{/link-to}}</td>
+        <td>{{server.currentNoOfConns}}</td>
+        <td>{{server.numberOfConnections}}</td>
         <td class={{cellstate server.status}}>{{server.status}}</td>
       </tr>
     {{/each}}

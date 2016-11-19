@@ -1,9 +1,16 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  server: DS.attr('string'),
-  address: DS.attr('string'),
-  port: DS.attr('string'),
-  connections: DS.attr('string'),
-  status: DS.attr('string')
+  server: DS.attr(),
+  status: DS.attr(),
+  protocol: DS.attr(),
+  port: DS.attr('number'),
+  serverVersion: DS.attr(),
+  nodeId: DS.attr('number'),
+  masterId: DS.attr(),
+  slaveIds: DS.attr(),
+  replDepth: DS.attr(),
+  numberOfConnections: DS.attr('number'),
+  currentNoOfConns: DS.attr('number'),
+  currentNoOfOperations: DS.attr('number')
 });
