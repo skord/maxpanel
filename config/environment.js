@@ -41,7 +41,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.APP.ApiNamespace = "api";
+    ENV.APP.ApiNamespace = "";
   }
 
   return ENV;

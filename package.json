@@ -55,7 +55,6 @@
     "ember-welcome-page": "^1.0.1",
     "highcharts": "4.2.6",
     "loader.js": "^4.0.1",
-    "node-sass": "3.4.2",
     "semantic-ui-ember": "2.0.0"
   }
 }
