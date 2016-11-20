@@ -6,7 +6,7 @@ export default JSONAPISerializer.extend({
   normalizeFindAllResponse(store, primaryModelClass, payload, id, requestType) {
     var clientsCollection = payload;
     var dataCollection = [];
-    Ember.$.map(clientsCollection, function(client, i){
+    Ember.$.map(clientsCollection, function(client){
       var normalizedKeys = camelcaseKeys(client);
 
       var entry = {

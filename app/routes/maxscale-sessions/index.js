@@ -21,7 +21,7 @@ export default Ember.Route.extend({
         return this.transitionTo("error");
       });
       Ember.run.later(this, this.refresh, 2000);
-      return userPromise
+      return userPromise;
     }
   },
   actions: {
