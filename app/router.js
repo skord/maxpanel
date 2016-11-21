@@ -17,6 +17,7 @@ Router.map(function() {
   this.route('clients', function() {});
   this.route('servers', function() {
     this.route('show', { path: '/:server_id'});
+    this.route('new');
   });
   this.route('events', function() {});
   this.route('welcome', function() {});

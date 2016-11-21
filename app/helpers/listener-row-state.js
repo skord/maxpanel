@@ -1,14 +1,14 @@
 import Ember from 'ember';
 
 export function listenerRowState(params/*, hash*/) {
-  var downConditions = ["Stopped","Down"];
+  var downConditions = ["Stopped","Down","Slave, Down"];
   var warningConditions = ["In Development", "Alpha", "Beta"];
   if (downConditions.contains(params.toString()))  {
-    return "row red lighten-5";
+    return "negative";
   } else if (warningConditions.contains(params.toString())){
-    return "row yellow lighten-5";
+    return "warning";
   } else {
-    return "cell";
+    return "";
   }
 
 }

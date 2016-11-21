@@ -5,13 +5,13 @@ export function cellstate(params/*, hash*/) {
   var upConditions = ["Running", "Slave, Running", "Master, Running","GA"];
   var warningConditions = ["In Development", "Alpha", "Beta"];
   if (downConditions.contains(params.toString()))  {
-    return "cell red lighten-5";
+    return "negative";
   } else if (upConditions.contains(params.toString())) {
-    return "cell green lighten-5";
+    return "positive";
   } else if (warningConditions.contains(params.toString())){
-    return "cell yellow lighten-5";
+    return "warning";
   } else {
-    return "cell";
+    return "";
   }
 }
 

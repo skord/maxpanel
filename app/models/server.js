@@ -2,6 +2,7 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   server: DS.attr(),
+  name: DS.attr(),
   status: DS.attr(),
   protocol: DS.attr(),
   port: DS.attr('number'),
