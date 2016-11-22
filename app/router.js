@@ -16,8 +16,9 @@ Router.map(function() {
   this.route('sessions');
   this.route('clients', function() {});
   this.route('servers', function() {
-    this.route('show', { path: '/:server_id'});
+    this.route('show', { path: ':server_id'});
     this.route('new');
+    this.route('edit', { path: ':server_id/edit'});
   });
   this.route('events', function() {});
   this.route('welcome', function() {});
@@ -26,6 +27,9 @@ Router.map(function() {
   this.route('event', function() {});
   this.route('maxscale_session');
   this.route('error', function() {});
+  this.route('monitors', function() {
+    this.route('show', {path: ':monitor_id'});
+  });
 });
 
 export default Router;

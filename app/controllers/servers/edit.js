@@ -1,0 +1,28 @@
+import Ember from 'ember';
+
+export default Ember.Controller.extend({
+  inError: false,
+  isValid: Ember.computed(
+    'model.name',
+    'model.port',
+    {
+      get() {
+        return !Ember.isEmpty(this.get('model.name')) &&
+               !Ember.isEmpty(this.get('model.port'));
+      }
+    }
+  ),
+  actions: {
+    save() {
+      this.get("model").save().then((server) => {
+        this.transitionToRoute("servers.show", server);
+      }, (err) => {
+        this.set('inError', true);
+        this.set('errorMessage', "There were errors saving this server: ")
+      });
+    },
+    cancel(model) {
+      this.transitionToRoute("servers.show", model)
+    }
+  }
+});

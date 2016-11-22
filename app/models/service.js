@@ -6,9 +6,9 @@ export default DS.Model.extend({
   state: DS.attr('string'),
   started: DS.attr('string'),
   rootUserAccess: DS.attr('string'),
-  backendDatabases: DS.attr('string'),
   usersData: DS.attr('string'),
   totalConnections: DS.attr('string'),
-  currentlyConnected: DS.attr('string')
+  currentlyConnected: DS.attr('string'),
+  servers: DS.hasMany('server')
 
 });

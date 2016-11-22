@@ -9,7 +9,7 @@
 <table class="ui definition table">
   <thead>
     <tr>
-      <th></th>
+      <th class="four wide"></th>
       <th>Value</th>
     </tr>
   </thead>
@@ -68,3 +68,28 @@
     </tr>
   </tbody>
 </table>
+
+
+{{#link-to 'servers.edit' model }}<div class='ui button'>Edit</div>{{/link-to}}
+
+<div class="ui button" {{action 'openModal' 'deleteserver'}}>
+  Retire
+</div>
+{{#ui-modal name="deleteserver" class="deleteserver" onApprove=(action 'approveDeleteModal') onDeny=(action 'cancelModal')}}
+  <i class="close icon"></i>
+  <div class="header">
+    Delete Server
+  </div>
+  <div class="content">
+    Are you absolutely sure you want to delete this server from maxscale?
+  </div>
+  <div class="actions">
+    <div class="ui black deny button">
+      Nope
+    </div>
+    <div class="ui approve red right labeled icon button">
+      Delete
+      <i class="warning sign icon"></i>
+    </div>
+  </div>
+{{/ui-modal}}

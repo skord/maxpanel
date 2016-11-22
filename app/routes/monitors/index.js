@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function() {
-    return this.store.findAll('server', {reload: true});
+    return this.store.findAll('monitor', {reload: true});
   },
   setupController: function(controller, model) {
     this._super(controller, model);
@@ -16,7 +16,7 @@ export default Ember.Route.extend({
     if (!this.get('refreshing')) {
       return;
     } else {
-      let userPromise = this.store.findAll('server', {reload: true});
+      let userPromise = this.store.findAll('monitor', {reload: true});
       userPromise.catch((error) => {
         return this.transitionTo("error");
       });

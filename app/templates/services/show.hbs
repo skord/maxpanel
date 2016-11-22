@@ -10,7 +10,7 @@
 <table class="ui definition table">
   <thead>
     <tr>
-      <th></th>
+      <th class='four wide'></th>
       <th>Value</th>
     </tr>
   </thead>
@@ -37,7 +37,7 @@
     </tr>
     <tr>
       <td>Backend Databases</td>
-      <td>{{model.backendDatabases}}</td>
+      <td>{{#each model.servers as |s|}}{{#link-to 'servers.show' s.id}}{{s.id}}:{{s.port}}{{/link-to}} {{/each}}</td>
     </tr>
     <tr>
       <td>Users Data</td>

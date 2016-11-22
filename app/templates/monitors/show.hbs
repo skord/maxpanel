@@ -1,0 +1,31 @@
+<h2>Monitor: {{model.name}}</h2>
+<table class="ui definition table">
+  <thead>
+    <tr>
+      <th class="four wide"></th>
+      <th class="twelve wide">Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>State</td>
+      <td class={{cellstate model.state}}>{{model.state}}</td>
+    </tr>
+    <tr>
+      <td>
+        Sampling Interval
+      </td>
+      <td>
+        {{model.samplingInterval}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Connect Timeout
+      </td>
+      <td>
+        {{model.connectTimeout}}
+      </td>
+    </tr>
+  </tbody>
+</table>
