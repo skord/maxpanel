@@ -1,7 +1,4 @@
-// Fix for Roboto font path
-$roboto-font-path: '../assets/';
 
-// Materialize styles
 #main-content {
 
   margin-top: 20px;

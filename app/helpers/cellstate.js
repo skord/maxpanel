@@ -4,11 +4,11 @@ export function cellstate(params/*, hash*/) {
   var downConditions = ["Stopped","Down"];
   var upConditions = ["Running", "Slave, Running", "Master, Running","GA"];
   var warningConditions = ["In Development", "Alpha", "Beta"];
-  if (downConditions.contains(params.toString()))  {
+  if (downConditions.includes(params.toString()))  {
     return "negative";
-  } else if (upConditions.contains(params.toString())) {
+  } else if (upConditions.includes(params.toString())) {
     return "positive";
-  } else if (warningConditions.contains(params.toString())){
+  } else if (warningConditions.includes(params.toString())){
     return "warning";
   } else {
     return "";

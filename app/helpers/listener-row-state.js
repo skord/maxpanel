@@ -3,9 +3,9 @@ import Ember from 'ember';
 export function listenerRowState(params/*, hash*/) {
   var downConditions = ["Stopped","Down","Slave, Down"];
   var warningConditions = ["In Development", "Alpha", "Beta"];
-  if (downConditions.contains(params.toString()))  {
+  if (downConditions.includes(params.toString()))  {
     return "negative";
-  } else if (warningConditions.contains(params.toString())){
+  } else if (warningConditions.includes(params.toString())){
     return "warning";
   } else {
     return "";
