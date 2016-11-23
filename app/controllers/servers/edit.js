@@ -1,6 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+
+  allMonitors: Ember.computed(function(){
+    return this.store.findAll('monitor')
+  }),
   inError: false,
   isValid: Ember.computed(
     'model.name',

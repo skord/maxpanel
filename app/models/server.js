@@ -13,5 +13,6 @@ export default DS.Model.extend({
   replDepth: DS.attr(),
   numberOfConnections: DS.attr('number'),
   currentNoOfConns: DS.attr('number'),
-  currentNoOfOperations: DS.attr('number')
+  currentNoOfOperations: DS.attr('number'),
+  monitors: DS.hasMany('monitor')
 });

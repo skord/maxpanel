@@ -21,6 +21,15 @@
     <label>TCP Port</label>
     {{input value=model.port placeholder="3306"}}
   </div>
+  <div class="field">
+    <label>Monitors</label>
+    {{#multiselect-checkboxes tagName='div' options=allMonitors selection=model.monitors as |monitor isSelected|}}
+      {{input type="checkbox" checked=isSelected}}
+      <label>{{monitor.id}}</label>
+    {{/multiselect-checkboxes}}
+
+    <!-- {{multiselect-checkboxes options=allMonitors labelProperty='id' selection=model.monitors}} -->
+  </div>
   <input type="submit" value="Save" class="ui button primary"/>
   <button {{action "cancel" }} class="ui button">Cancel</button>
 </form>

@@ -66,6 +66,14 @@
       <td>Total Connections</td>
       <td>{{model.numberOfConnections}}</td>
     </tr>
+    <tr>
+      <td>Monitors</td>
+      <td>
+        {{#each model.monitors as |monitor|}}
+        {{#link-to "monitors.show" monitor}}{{monitor.id}}{{/link-to}}
+        {{/each}}
+      </td>
+    </tr>
   </tbody>
 </table>
 
