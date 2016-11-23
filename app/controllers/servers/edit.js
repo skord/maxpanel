@@ -18,7 +18,7 @@ export default Ember.Controller.extend({
         this.transitionToRoute("servers.show", server);
       }, (err) => {
         this.set('inError', true);
-        this.set('errorMessage', "There were errors saving this server: ")
+        this.set('errorMessage', "There were errors saving this server: ");
       });
     },
     cancel() {

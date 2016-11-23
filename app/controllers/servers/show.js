@@ -4,16 +4,16 @@ export default Ember.Controller.extend({
   actions: {
     openModal: function(name) {
       // alert('hi')
-      $('.ui.' + name + '.modal').modal('show');
+      Ember.$('.ui.' + name + '.modal').modal('show');
     },
     approveDeleteModal: function(element, component) {
       this.get('model').destroyRecord().then(() => {
         this.transitionToRoute("servers.index");
       });
-      return true
+      return true;
     },
     cancelModal: function() {
-      return true
+      return true;
     }
   }
 });
